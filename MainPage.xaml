@@ -8,7 +8,47 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid Width="640" MaxWidth="640" Height="720" MaxHeight="720" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <RelativePanel>
+            <StackPanel Orientation="Vertical" Width="640" MaxHeight="679" MaxWidth="640" Height="679" VerticalAlignment="Top" Name="App">
+                <StackPanel Height="291" Orientation="Horizontal">
+                    <TextBox Width="465" Height="281" BorderThickness="2" VerticalAlignment="Center" 
+                             HorizontalAlignment="Center" Margin="7,5,8,5" PlaceholderText="0" 
+                             TextAlignment="Right" Name="Display" FontWeight="Bold" 
+                             MaxLength="23" FontSize="72" TextWrapping="Wrap"/>
+                    <StackPanel Orientation="Vertical" Width="160">
+                        <Button Height="87" Width="145" Margin="7,5,8,5" Name="BackSpace" Content="BACK" Click="ClickBack" FontSize="36"/>
+                        <Button Height="87" Width="145" Margin="7,5,8,5" Name ="Clear" Content="C" Click="ClickClear" FontSize="48"/>
+                        <Button Height="87" Width="145" Margin="7,5,8,5" Name="Equal" Content="=" Click="ClickEqual" FontSize="48"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Height="97" Orientation="Horizontal" HorizontalAlignment="Left" Width="640">
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Nine" Content="9" Click="Click9" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Eight" Content="8" Click="Click8" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Seven" Content="7" Click="Click7" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Divide" Content="/" Click="ClickDivide" FontSize="48"/>
+                </StackPanel>
+                <StackPanel Height="97" Orientation="Horizontal" HorizontalAlignment="Left" Width="640">
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Six" Content="6" Click="Click6" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Five" Content="5" Click="Click5" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Four" Content="4" Click="Click4" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Multiply" Content="*" Click="ClickMultiply" FontSize="48"/>
+                </StackPanel>
+                <StackPanel Height="97" Orientation="Horizontal" HorizontalAlignment="Left" Width="640">
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Three" Content="3" Click="Click3" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Two" Content="2" Click="Click2" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="One" Content="1" Click="Click1" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name=" Plus" Content="+" Click="ClickPlus" FontSize="48"/>
+                </StackPanel>
+                <StackPanel Height="97" Orientation="Horizontal" HorizontalAlignment="Left" Width="640">
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="DoubleZero" Content="00" Click="Click00" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Zero" Content="0" Click="Click0" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Decimal" Content="." Click="ClickPoint" FontSize="48"/>
+                    <Button Height="87" Width="145" Margin="7,5,8,5" Name="Minus" Content="-" Click="ClickMinus" FontSize="48"/>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Text="Note: This is a linear calculator only. It does not follow BODMAS rule."
+                       Width="640" Margin="5,5,5,5" RelativePanel.Below="App"  FontSize="20" TextAlignment="Right"/>
+        </RelativePanel>
     </Grid>
 </Page>
