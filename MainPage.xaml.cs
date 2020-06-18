@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -33,6 +34,8 @@ namespace SimpleCalculator
         private void ClickEqual(object sender, RoutedEventArgs e)
         {
             string newDisplay = Calculate(Display.Text);
+            if (!float.TryParse(newDisplay, out float trash))
+                Display.Foreground = new SolidColorBrush(Colors.Red);
             Display.Text = newDisplay;
         }
 
@@ -145,7 +148,7 @@ namespace SimpleCalculator
                 output = Output.Peek().ToString();
             }
 
-            else output = "Likhte bhi nahi aata!";
+            else output = "Innput Error";
             return output;
         }
 
@@ -179,6 +182,8 @@ namespace SimpleCalculator
             string[] Nums = input.Split(separators);
             if (input.IndexOf(Nums[0]) != 0)
                 return false;
+            if (Nums.Length == 1)
+                return false;
             for (var i=1; i<Nums.Length; i++)
             {   float Number = default;
                 if (float.TryParse(Nums[i], out Number))
@@ -197,14 +202,16 @@ namespace SimpleCalculator
             {
                 string newDisplay = Display.Text.Substring(0, Display.Text.Length - 1);
                 Display.Text = newDisplay;
+                Display.Foreground = new SolidColorBrush(Colors.Black);
             }
 
-            else ;
+            else Display.Foreground = new SolidColorBrush(Colors.Black); ;
         }
 
         private void ClickClear(object sender, RoutedEventArgs e)
         {
             Display.Text = "";
+            Display.Foreground = new SolidColorBrush(Colors.Black);
         }
 
         private void Click9(object sender, RoutedEventArgs e)

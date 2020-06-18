@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    
     <Grid Width="640" MaxWidth="640" Height="720" MaxHeight="720" HorizontalAlignment="Left" VerticalAlignment="Top">
         <RelativePanel>
             <StackPanel Orientation="Vertical" Width="640" MaxHeight="679" MaxWidth="640" Height="679" VerticalAlignment="Top" Name="App">
@@ -17,8 +17,8 @@
                              TextAlignment="Right" Name="Display" FontWeight="Bold" 
                              MaxLength="23" FontSize="72" TextWrapping="Wrap"/>
                     <StackPanel Orientation="Vertical" Width="160">
-                        <Button Height="87" Width="145" Margin="7,5,8,5" Name="BackSpace" Content="BACK" Click="ClickBack" FontSize="36"/>
-                        <Button Height="87" Width="145" Margin="7,5,8,5" Name ="Clear" Content="C" Click="ClickClear" FontSize="48"/>
+                        <Button Height="87" Width="145" Margin="7,5,8,5" Name ="Clear" Content="C" Click="ClickClear" FontSize="48" Background="Red"/>
+                        <Button Height="87" Width="145" Margin="7,5,8,5" Name="BackSpace" Content="BACK" Click="ClickBack" FontSize="36" Background="Blue"/>
                         <Button Height="87" Width="145" Margin="7,5,8,5" Name="Equal" Content="=" Click="ClickEqual" FontSize="48"/>
                     </StackPanel>
                 </StackPanel>
